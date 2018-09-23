@@ -1,0 +1,39 @@
+/* do not remove these definitions or replace them #includes */
+#define NULL 0
+typedef long size_t;
+void *malloc(size_t size);
+void *realloc(void *ptr, size_t size);
+void *calloc(size_t nitems, size_t size);
+void free(void* ptr);
+int printf(const char *format, ...);
+
+/* The following #ifdef and its contents need to remain as-is. */
+#ifndef TYPE
+#define TYPE short
+TYPE sentinel = -1234;
+#else
+extern TYPE sentinel;
+#endif
+
+/* typedefs needed for this task: */
+typedef struct node_t 
+{ 
+  TYPE payload; 
+  struct node_t *next; 
+} node;
+typedef struct range_t 
+{ 
+  unsigned int length; 
+  TYPE *ptr; 
+} range;
+
+node *convert(range list) 
+{
+  
+}
+void append(node **dest, node *source) {
+   
+}
+void remove_if_equal(node **dest, TYPE value) {
+  
+}
